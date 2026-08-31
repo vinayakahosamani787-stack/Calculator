@@ -1,6 +1,6 @@
 print("====Calculator====")
 def menu():
-    print("1. Addition\n2. Subraction\n3. Multiplication\n4. Division\n5. Exit\n")
+    print("1. Addition\n2. Subraction\n3. Multiplication\n4. Division\n5. Square\n6. Exit\n")
 def add(a,b):
     sum=a+b
     return sum
@@ -20,12 +20,18 @@ def Div(a,b):
         print("No error")
     finally:
         print("End")
+def square(n):
+    return n*n
 while True:
     menu()
     choice=int(input("Enter your choice: "))
-    if choice==5:
+    if choice==6:
         print("Exit")
         break
+    if choice==5:
+        n=int(input("Enter the number: "))
+        print(f"Square of number is:{square(n)}")
+        continue
     if choice in [1,2,3,4]:
         a=int(input("Enter first number: "))
         b=int(input("Enter second number: "))
